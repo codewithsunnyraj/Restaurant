@@ -13,6 +13,9 @@ export default {
       backgroundImage:{
         'header-bg':'url("./src/assets/frontend_assets/header_img.png")'
       },
+      boxShadow:{
+          'box-shadow':'0px 0px 10px #00000015'
+      },
       animation:{
         'fadeIn':'fadeIn 3s'
       }

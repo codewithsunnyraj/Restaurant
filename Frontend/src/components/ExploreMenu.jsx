@@ -13,7 +13,7 @@ const ExploreMenu = ({ category, setCategory }) => {
             vitae eaque delectus beatae culpa nemo eum ad?
           </p>
         </div>
-        <div className="flex gap-10 my-4">
+        <div className="flex gap-10 my-4 ">
           {menu_list.map((items, index) => (
             <div
               onClick={() =>
@@ -25,7 +25,7 @@ const ExploreMenu = ({ category, setCategory }) => {
               className="text-center cursor-pointer"
             >
               <img 
-              className={`${category === items.menu_name ? "active border-2 duration-105 transition-all border-orange-700 rounded-full p-1":""}`}
+              className={`${category === items.menu_name ? "active border-2  duration-105 transition-all border-orange-700 rounded-full p-1 ":""}`}
               src={items.menu_image} alt="" />
               <p className="mt-5 font-semibold text-base">{items.menu_name}</p>
             </div>

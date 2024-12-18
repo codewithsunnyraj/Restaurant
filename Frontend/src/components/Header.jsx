@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
   return (
     <div className='  container mx-auto '>
-       <div className='bg-header-bg relative bg-cover h-full  py-40 mx-32'>
+       <div className='bg-header-bg relative bg-cover h-full  py-40 '>
           <div className='relative top-24 animate-fadeIn px-20'> 
              <h1 className='text-6xl font-semibold text-white '>Order Your Favourite Food here</h1>
              <div>

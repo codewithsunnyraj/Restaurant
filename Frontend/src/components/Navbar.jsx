@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { assets } from "../assets/frontend_assets/assets";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [menu, setMenu] = useState("Home");
   return (
@@ -11,7 +11,8 @@ const Navbar = () => {
         </div>
         <div className="flex">
           <ul className="flex  gap-5">
-            <li
+            <Link
+            path='/'
               className={`${
                 menu === "Home"
                   ? "active border-b-2 pb-2 border-orange-500 "
@@ -22,8 +23,9 @@ const Navbar = () => {
               }}
             >
               Home
-            </li>
-            <li
+            </Link>
+            <a
+            href="#explore-menu"
               className={`${
                 menu === "Menu"
                   ? "active border-b-2 pb-2 border-orange-500"
@@ -34,8 +36,8 @@ const Navbar = () => {
               }}
             >
               Menu
-            </li>
-            <li
+            </a>
+            <a href="#mobile-App"
               className={`${
                 menu === "Mobile-App"
                   ? "active border-b-2 pb-2 border-orange-500"
@@ -46,8 +48,8 @@ const Navbar = () => {
               }}
             >
               Mobile-App
-            </li>
-            <li
+            </a>
+            <a href="#contact-us"
               className={`${
                 menu === "Contact-Us"
                   ? "active border-b-2 pb-2 border-orange-500"
@@ -58,7 +60,7 @@ const Navbar = () => {
               }}
             >
               Contact-Us
-            </li>
+            </a>
           </ul>
         </div>
         <div>
