@@ -6,7 +6,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
  
   const {cartItems,addToCart,removeFromCart} = useContext(StoreContext);
   return (
-    <div className="mt-14 shadow-box-shadow p-3">
+    <div className="mt-14 shadow-box-shadow p-3 cursor-pointer">
       <div className="relative">
         <img src={image} alt="" className="rounded-md w-full" />
         {!cartItems[id] ? (

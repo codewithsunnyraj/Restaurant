@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className='bg-black' id='contact-us'>
         <div className='container mx-auto mt-20 '>
-        <div className="px-20 pt-10">
+        <div className="md:px-20 px-10 pt-10">
             <div className="grid md:grid-cols-2 gap-4 md:gap-24 lg:grid-cols-3 py-5 md:py-14">
                <div>
                 <div>
@@ -18,7 +18,7 @@ const Footer = () => {
                     </div>
                 </div>
                </div>
-               <div className='flex justify-center'>
+               <div className='md:flex justify-center'>
                 <div>
                     <h3 className='font-semibold text-2xl text-white'>Company</h3>
                     <ul className='text-slate-400 cursor-pointer py-6 space-y-3'>
@@ -29,7 +29,7 @@ const Footer = () => {
                     </ul>
                 </div>
                </div>
-               <div className='flex justify-center'>
+               <div className='md:flex justify-center'>
                 <div>
                 <h3 className='font-semibold text-2xl text-white'>Get In Touch</h3>
                 <div className='py-6 space-y-3'>
