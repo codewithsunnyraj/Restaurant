@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { assets } from "../assets/frontend_assets/assets";
 import { Link } from "react-router-dom";
+import { StoreContext } from "../context/StoreContext";
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("Home");
+  const { getTotalCartAmount } = useContext(StoreContext);
   return (
     <div className="w-full py-10 px-10 md:px-28">
       <div className="flex justify-between items-center">
         <div>
-          <img
-            src={assets.logo}
-            className="cursor-pointer w-[120px] md:w-full"
-            alt=""
-          />
+          <Link to="/">
+            <img
+              src={assets.logo}
+              className="cursor-pointer w-[120px] md:w-full"
+              alt=""
+            />
+          </Link>
         </div>
         <div className="lg:flex hidden">
           <ul className="flex  gap-5">
@@ -72,10 +76,16 @@ const Navbar = ({ setShowLogin }) => {
         <div>
           <div className="flex items-center gap-10">
             <img src={assets.search_icon} className="w-6 h-6" alt="" />
-            <div className="relative">
+            <Link to="/cart" className="relative">
               <img src={assets.basket_icon} className="w-6 h-6" alt="" />
-              <div className="dot absolute w-3 h-3 -top-2 -right-2 bg-orange-700 rounded-full"></div>
-            </div>
+              <div
+                className={
+                  getTotalCartAmount()===0
+                    ? ""
+                    : "dot absolute w-3 h-3 -top-2 -right-2 bg-orange-700 rounded-full"
+                }
+              ></div>
+            </Link>
             <button
               onClick={() => {
                 setShowLogin(true);
