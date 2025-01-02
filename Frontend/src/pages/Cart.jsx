@@ -26,9 +26,9 @@ const Cart = () => {
                   <div className="grid grid-cols-6 space-y-3 border-b-2 ">
                     <img src={items.image} className="md:w-16 w-10 my-2" alt="" />
                     <p>{items.name}</p>
-                    <p>${items.price}</p>
+                    <p>₹{items.price}</p>
                     <p>{cartItems[items._id]}</p>
-                    <p>${items.price * cartItems[items._id]}</p>
+                    <p>₹{items.price * cartItems[items._id]}</p>
                     <p
                       onClick={() => {
                         removeFromCart(items._id);
@@ -49,7 +49,7 @@ const Cart = () => {
               <h3 className="font-bold text-2xl mb-3">Cart Totals</h3>
               <div className="flex justify-between border-b-2  py-3">
                 <p>SubTotal</p>
-                <p>${getTotalCartAmount()}</p>
+                <p>₹{getTotalCartAmount()}</p>
               </div>
               <div className="flex justify-between border-b-2  py-3">
                 <p>Delivery Fee</p>
@@ -58,7 +58,7 @@ const Cart = () => {
               <div className="flex justify-between  py-3">
                 <p className="font-bold">Total</p>
                 <p>
-                  ${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}
+                  ₹{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}
                 </p>
               </div>
               <div>
