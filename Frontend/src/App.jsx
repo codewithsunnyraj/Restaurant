@@ -1,23 +1,26 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import { Route, Routes } from 'react-router-dom'
+import React, { useState } from "react";
+import Navbar from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import PlaceOrder from "./pages/PlaceOrder";
-import Footer from './components/Footer';
+import Footer from "./components/Footer";
+import LoginPopUp from "./components/LoginPopUp";
 
 const App = () => {
+  const [showLogin, setShowLogin] = useState(false);
   return (
-    <div>
-      <Navbar/>
+    <>
+      {showLogin ? <LoginPopUp setShowLogin={setShowLogin} /> : <></>}
+      <Navbar setShowLogin={setShowLogin} />
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/cart' element={<Cart/>} />
-        <Route path='/PlaceOrder' element={<PlaceOrder/>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/PlaceOrder" element={<PlaceOrder />} />
       </Routes>
-      <Footer/>
-    </div>
-  )
-}
+      <Footer />
+    </>
+  );
+};
 
-export default App
+export default App;
