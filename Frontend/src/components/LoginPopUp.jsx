@@ -4,7 +4,7 @@ import { assets } from "../assets/frontend_assets/assets";
 const LoginPopUp = ({ setShowLogin }) => {
   const [currState, setCurrState] = useState("Sign Up");
   return (
-    <div className="absolute z-10 flex justify-center items-center w-full h-full bg-[#00000090]">
+    <div className="absolute z-10 flex justify-center items-center px-4 md:px-0 w-full h-full bg-[#00000090]">
       <div className="bg-white  w-[450px] p-10 rounded-lg shadow-md ">
         <form className="">
           <div className=" flex justify-between">
