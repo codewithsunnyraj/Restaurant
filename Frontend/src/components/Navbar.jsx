@@ -70,7 +70,7 @@ const Navbar = () => {
               <img src={assets.basket_icon} className="w-6 h-6" alt="" />
               <div className="dot absolute w-3 h-3 -top-2 -right-2 bg-orange-700 rounded-full"></div>
             </div>
-            <button className="border border-orange-600 hover:bg-red-600  py-1 px-6 md:px-8 rounded-full hover:border-slate-600 hover:duration-300 cursor-pointer transition-all">
+            <button className="border border-orange-600 hover:bg-red-600 hover:text-white  py-1 px-6 md:px-8 rounded-full hover:border-slate-600 hover:border-none hover:duration-300 cursor-pointer transition-all">
               Sign in
             </button>
           </div>
