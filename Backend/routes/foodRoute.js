@@ -21,8 +21,13 @@ const upload = multer({ storage: storage });
 //add food routes
 foodRouter.post("/add", upload.single("image"), addFood);
 
+
+
 //list all food routes
 foodRouter.get("/list", listFood);
+
+
+
 
 //Remove Food
 foodRouter.post("/remove", removeFood);
