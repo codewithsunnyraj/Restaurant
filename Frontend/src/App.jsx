@@ -6,6 +6,7 @@ import Cart from "./pages/Cart";
 import PlaceOrder from "./pages/PlaceOrder";
 import Footer from "./components/Footer";
 import LoginPopUp from "./components/LoginPopUp";
+import Verify from "./pages/Verify";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/PlaceOrder" element={<PlaceOrder />} />
+        <Route path="/verify" element={<Verify />} />
       </Routes>
       <Footer />
     </>
