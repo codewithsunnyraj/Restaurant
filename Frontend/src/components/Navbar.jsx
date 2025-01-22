@@ -105,7 +105,7 @@ const Navbar = ({ setShowLogin }) => {
               <div className="relative group">
                 <img src={assets.profile_icon} alt="" />
                 <ul className="absolute w-[150px] group-hover:flex group-hover:flex-col duration-300 hidden cursor-pointer z-10 bg-black p-3 text-white -left-16">
-                  <li className="flex items-center mb-2">
+                  <li className="flex items-center mb-2" onClick={()=>{navigate("/myorders")}}>
                     <img src={assets.bag_icon} className="w-6" alt="" />
                     <p className="text-xs">Orders</p>
                   </li>

@@ -46,7 +46,7 @@ const MyOrders = () => {
                   <span>&#x25cf;</span>
                   <b>{order.status}</b>
                 </p>
-                <button className="py-1 px-8 mb-3 bg-red-300">Track Order</button>
+                <button onClick={fetchOrders} className="py-1 px-8 mb-3 bg-red-300">Track Order</button>
               </div>
             );
           })}
