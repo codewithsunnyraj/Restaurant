@@ -8,7 +8,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
   return (
     <div className="mt-14 shadow-box-shadow p-3 cursor-pointer">
       <div className="relative">
-        <img src={url+ "/images"+image} alt={url+ "/images"+image} className="rounded-md w-full" />
+        <img src={url+ "/images/"+image} alt={url+ "/images"+image} className="rounded-md w-full" />
         {!cartItems[id] ? (
           <img
             src={assets.add_icon_white}

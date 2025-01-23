@@ -55,7 +55,7 @@ const verifyOrder = async (req, res) => {
   try {
     if (success === "true") {
       await orderModel.findByIdAndUpdate(orderId, { payment: "true" });
-      res.status("200").json({ success: true, message: "Paid" });
+      res.status(200).json({ success: true, message: "Paid" });
     } else {
       await orderModel.findByIdAndDelete(orderId);
       res.json({ success: false, message: "Not Paid" });
@@ -70,7 +70,7 @@ const verifyOrder = async (req, res) => {
 const userOrders = async (req, res) => {
   try {
     const orders = await orderModel.find({ userId: req.body.userId });
-    res.status("200").json({ success: true, data: orders });
+    res.status(200).json({ success: true, data: orders });
   } catch (error) {
     console.log(error);
     res.json({ message: "Error", success: false });
